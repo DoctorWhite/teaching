@@ -1,32 +1,78 @@
-Include a header paragraph specific to your product here. Customer requirements are those required features and functions specified for and by the intended audience for this product. This section establishes, clearly and concisely, the "look and feel" of the product, what each potential end-user should expect the product do and/or not do. Each requirement specified in this section is associated with a specific customer need that will be satisfied. In general Customer Requirements are the directly observable features and functions of the product that will be encountered by its users. Requirements specified in this section are created with, and must not be changed without, specific agreement of the intended customer/user/sponsor.
+For this project, a table will be constructed upon which the top surface will consist of a video display.
+The display will recognize specific objects played on top of it and will be able to track their
+movement across the surface if moved or rotated. Object recognition will be dependent on
+uniquely shaped or patterned markers placed on the bottom of the object. For objects placed on
+the surface of the table that do not contain a recognized pattern (like a fingertip), the table will
+treat as user interaction (touch gesture).
 
-\subsection{Requirement Name}
+\subsection{The product will be a table of three feet by three feet in any geometric shape that is feasible}
 \subsubsection{Description}
-A detailed description of the feature/function that satisfies the requirement. For example: \textit{The box will be slate blue. This specific color is required in order to ensure that the box matches other similar boxes in the Box Systems Premium line of products. Slate blue is specified as \#007FFF, using six-digit hexadecimal color specification.} It is acceptable and advisable to include drawings/graphics in the description if it aids understanding of the requirement.
+While geometric shape isn't important, the table should be tall enough for items to be placed on it without being obscured. 
 \subsubsection{Source}
-The source of the requirement (e.g. customer, sponsor, specified team member (by name), federal regulation, local laws, CSE Senior Design project specifications, etc.)
+Paul Medcalf (Customer)
 \subsubsection{Constraints}
-A detailed description of constraints on satisfying the requirement (e.g. one such constraint might be: \textit{The specified color must be commercially available in paint capable of adhering to the material of which the box is manufactured. (See customer requirement 3.x for production material specification.)}
+The projector must be able to project evenly onto the surface and have a focal length that allows the display to remain in focus. The resulting structure should be stable enough to support several aluminum cylinders in the worst case.
 \subsubsection{Standards}
-A detailed description of any specific standards that apply to this requirement (e.g. \textit{NSTM standard xx.xxx.x. color specifications \cite{Rubin2012}}.)
+NA
 \subsubsection{Priority}
-The priority of this requirement relative to other specified requirements. Use the following priorities:
-\begin{itemize}
-\item Critical (must have or product is a failure)
-\item High (very important to customer acceptance, desirability)
-\item Moderate (should have for proper product functionality);
-\item Low (nice to have, will include if time/resource permits)
-\item Future (not feasible in this version of the product, but should be considered for a future release).
-\end{itemize}
+Critical
 
-\subsection{Requirement Name}
+\subsection{The product will recognize user touch interaction}
 \subsubsection{Description}
-Detailed requirement description...
+Utilizing a projector and sensor, the table will recognize all input that is not a fiducial markers as touch input.
 \subsubsection{Source}
-Source
+Paul Medcalf (Customer)
 \subsubsection{Constraints}
-Detailed description of applicable constraints...
+High precision may not be possible due to sensor limits and input lag.
 \subsubsection{Standards}
-List of applicable standards
+NA
 \subsubsection{Priority}
-Priority
+High
+
+\subsection{The product will recognize fiducial markers}
+\subsubsection{Description}
+Utilizing the a fiducial recognition library, the table will recognize the fidcuial markers of multiple different career cylinders or pucks to display career information.
+\subsubsection{Source}
+Paul Medcalf (Customer)
+\subsubsection{Constraints}
+May be limitations depending on the fiducial recognition library used and the projection surface utilized.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+\subsection{The product will display career information}
+\subsubsection{Description}
+The product will maintain a database of career information, which will trigger a view operation upon placement of a marker.
+\subsubsection{Source}
+Paul Medcalf (Customer)
+\subsubsection{Constraints}
+The storage capacity of the device will determine the limit to the number of entries.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Critical
+
+\subsection{The product will allow modification of the career information}
+\subsubsection{Description}
+A content management system will be created to update career entries, delete them, and add new ones.
+\subsubsection{Source}
+Micah Dumont
+\subsubsection{Constraints}
+The User Interface may be difficult to type with, so a keyboard may be necessary for input. This content management system may consist of directly querying the database if time constraints become a factor.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Medium
+
+\subsection{The product will utilize a dial interface}
+\subsubsection{Description}
+The final product will allow rotation of the fiducial markers to affect user interaction in a meaningful way. For example, to access different froms of media within a particular career.
+\subsubsection{Source}
+Micah Dumont
+\subsubsection{Constraints}
+The detection hardware might make this particular implementation difficult. This will need to be allowed by the Reactivision Library, or the Fiducial Library in use.
+\subsubsection{Standards}
+NA
+\subsubsection{Priority}
+Medium
