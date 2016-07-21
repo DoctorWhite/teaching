@@ -1,10 +1,65 @@
-This section provides a description of your product and defines it's primary features and functions. The purpose is to give the document reader/reviewer enough information about the product to allow them to easily follow the specification of requirements found in the remainder of the document. Your header for this section should introduce the section with a brief statement such as: "This section provides the reader with an overview of X. The primary operational aspects of the product, from the perspective of end users, maintainers and administrators, are defined here. The key features and functions found in the product, as well as critical user interactions and user interfaces are described in detail." Using words, and pictures or graphics where possible, specify the following:
-
+This section provides an overview of the Fiducial Career Display. A table will be constructed upon which the top surface will consist of a video display. The display will recognize specific objects played on top of it and will be able to track their movement across the surface if moved or rotated. Object recognition will be dependent on uniquely shaped or patterned markers placed on the bottom of the object. For objects placed on the surface of the table that do not contain a recognized pattern (like a fingertip), the table will treat as user interaction (touch gesture). Each marker will display the details including text, image, or videos about that career.
 \subsection{Features \& Functions}
-What the product does and does not do. Specify in words what it looks like, referring to a conceptual diagram/graphic (Figure X).  Define the principle parts/components of the product. Specify the elements in the diagram/graphic that are part(s) of this product as well as any associated external elements (e.g., the Internet, an external web server, a GPS satellite, etc.)
+Hardware features:
+\begin{itemize}
+\item A semi-transparent acrylic board that make the table top as well as interactive display.
+\item An infrared camera used to capture the input from the user.
+\item A short throw projector mounted below the table to provide the interactive display.
+\item A computer to run the recognition and application softwares.
+\item A Fiducial marker that will represent a career. When a marker is placed on the table, an interface will appear to allow the user to page through different details about that career.
+\end{itemize}
+
+
+Software Features:
+\begin{itemize}
+\item Movable modular interface.
+\item Automatic orientation based on position on table.
+\item Navigable content.
+\item Logo screen when not engaged.
+\item Transitions in and out when marker is introduced and removed.
+\item Track type of markers on the table.
+\end{itemize}
 
 \subsection{External Inputs \& Outputs}
-Describe critical external data flows. What does your product require/expect to receive from end users or external systems (inputs), and what is expected to be created by your product for consumption by end users or external systems (outputs)? In other words, specify here all data/information to flow into and out of your systems. A table works best here, with rows for each critical data element, and columns for name, description and use.
+
+\begin{table}[H]
+\centering
+\caption{Input \& Output}
+\label{input}
+\begin{tabular}{|l|l|l|}
+\hline
+Name            & Description                                                                                                              & Use                                                                                                      \\ \hline
+Input           &                                                                                                                          &                                                                                                          \\ \hline
+Fiducial Marker & \begin{tabular}[c]{@{}l@{}}Fiducial markers which can be tracked from \\ a camera and interpreted using software.\end{tabular} & \begin{tabular}[c]{@{}l@{}}Place on top of the table for \\ activating career choice menu\end{tabular} \\ \hline
+Finger touch    & Human finger on the table surface                                                                                        & \begin{tabular}[c]{@{}l@{}}Use to select and interact\\ with the menu\end{tabular}                   \\ \hline
+Output          &                                                                                                                          &                                                                                                          \\ \hline
+Display         & \begin{tabular}[c]{@{}l@{}}A semi-transparent tabletop capable \\ of display\end{tabular}                              & \begin{tabular}[c]{@{}l@{}}Projected the screen to the \\ table surface\end{tabular}                    \\ \hline
+Sound           & Audio source                                                                                                             & Play on input and media request                                                                                  \\ \hline
+\end{tabular}
+\end{table}
 
 \subsection{Product Interfaces}
-Specify what all operational (visible) interfaces look like to your end-user, administrator, maintainer, etc. Show sample/mocked-up screen shots, graphics of buttons, panels, etc. Refer to the critical external inputs and outputs described in the paragraph above.
+
+\begin{figure}[H]
+	\centering
+   	\includegraphics[width=0.6\textwidth]{images/reactivision02}
+    \caption{Fiducial pattern examples}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+   	\includegraphics[width=0.9\textwidth]{images/reactivision03}
+    \caption{Table concept }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+   	\includegraphics[width=0.4\textwidth]{images/ReacTable-live-6-instrument}
+    \caption{Round table concept}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+   	\includegraphics[width=0.5\textwidth]{images/ReacTable-instrument-detail1}
+    \caption{Round table concept \cite{concept2}}
+\end{figure}
