@@ -1,0 +1,56 @@
+\subsection{Subsystem 1 Camera}
+This subsystem is the camera itself. It will be a hardware component mounted onto the bottom of the table and will operate in IR. It will mainly communicate with Reactivision by sending it information.
+
+\begin{figure}[h!]
+	\centering
+ 	\includegraphics[width=0.60\textwidth]{images/subsystem}
+ \caption{Example subsystem description diagram}
+\end{figure}
+
+\subsubsection{Assumptions}
+Assumes no distortion on the camera. Distortion may cause recognization issues to surface when trying to read a marker.
+
+\subsubsection{Responsibilities}
+This camera will take in the unique marker.
+It will send the marker identified into the Reactivision.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
+\begin {table}[H]
+\caption {Subsystem interfaces} 
+\begin{center}
+    \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
+    \hline
+    ID & Description & Inputs & Outputs \\ \hline
+    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
+    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Subsystem 2 Reactivision}
+This is a software component. This software is free and taken from the official Reactivision site. It takes input from the camera and will process the marker received. This software will recognize the unique markers the user will place onto the table. 
+
+\subsubsection{Assumptions}
+Assumes image sent from camera is clear and readable.  
+
+\subsubsection{Responsibilities}
+This software will process the image from the camera and recognize the marker. It will return the ID of the marker and rotational data. The data will be sent to TUIO.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
+
+\subsection{Subsystem 3 TUIO}
+This software component comes with Reactivision. It will handle processing the data with Reactivision.
+
+\subsubsection{Assumptions}
+Assumes image sent from camera and Reactivision is readable.  
+
+\subsubsection{Responsibilities}
+This software processes the data sent from Reactivision and the camera. It will also read any finger inputs from the user and return results for display.
+
+\subsubsection{Subsystem Interfaces}
+Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
